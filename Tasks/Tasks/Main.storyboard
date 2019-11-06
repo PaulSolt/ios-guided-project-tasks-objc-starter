@@ -125,7 +125,7 @@
                     <navigationItem key="navigationItem" title="Title" id="z9b-u2-D5W">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="FS3-p2-Jxo">
                             <connections>
-                                <action selector="save:" destination="WI2-wJ-dAU" id="YSR-ec-hWY"/>
+                                <action selector="saveButtonPressed:" destination="WI2-wJ-dAU" id="pT9-Hh-Kd2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
