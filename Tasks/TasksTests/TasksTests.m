@@ -44,6 +44,12 @@
 	
 	NSString *parrot = @"Hello";
 	NSLog(@"Parrot: %@", [parrot repeatString]);
+	
+	
+	// Class method / property
+//	task.totalTasksCreated // class method error
+	
+	NSLog(@"Tasks created: %d", LSITaskController.totalTasksCreated);
 }
 
 @end

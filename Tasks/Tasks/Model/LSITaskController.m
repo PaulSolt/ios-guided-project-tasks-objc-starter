@@ -17,6 +17,14 @@
 
 @implementation LSITaskController
 
+// static is required for a class variable
+static int _totalTasksCreated = 0;
+
++ (int)totalTasksCreated {
+	return _totalTasksCreated;
+}
+
+
 - (instancetype)init {
 	self = [super init];
 	if (self) {
@@ -27,6 +35,7 @@
 
 - (void)addTask:(LSITask *)task {
 	[self.internalTasks addObject:task];
+	_totalTasksCreated += 1;
 }
 
 - (void)removeTask:(LSITask *)task {

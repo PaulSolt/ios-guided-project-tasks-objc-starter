@@ -21,6 +21,11 @@
 @property (nonatomic, readonly) NSArray *tasks;
 // Don't need copy, because there is no setter
 
+// BUG: class doesn't autocomplete in property
+@property (nonatomic, class, readonly) int totalTasksCreated;
+
+//+ (int)totalTasksCreated;
+
 // Public methods
 
 - (void)addTask:(LSITask *)task;
