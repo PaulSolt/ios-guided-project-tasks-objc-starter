@@ -28,6 +28,15 @@
     [self updateViews];
 }
 
+// MARK: - Properties
+- (void)setTask:(LSITask *)task
+{
+    if (task != _task) {
+        _task = task;
+        [self updateViews];
+    }
+}
+
 // MARK: - Actions
 
 - (IBAction)save:(id)sender {
@@ -37,10 +46,14 @@
 // MARK: - Private
 
 - (void)updateViews {
+    if (!self.isViewLoaded || !self.task) { return; }
     
+    self.title = self.task.name;
+    self.nameTextField.text = self.task.name;
+    self.notesTextView.text = self.task.notes;
+    self.datePicker.date = self.task.dueDate;
 }
 
-// MARK: - Properties
 
 
 
