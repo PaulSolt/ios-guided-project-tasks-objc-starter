@@ -7,6 +7,7 @@
 //
 
 #import "LSITaskController.h"
+#import "LSITask.h"
 
 @interface LSITaskController ()
 
@@ -24,13 +25,29 @@ static int _totalTasksCreated = 0;
 	return _totalTasksCreated;
 }
 
-
 - (instancetype)init {
 	self = [super init];
 	if (self) {
 		_internalTasks = [[NSMutableArray alloc] init];
+		// TODO: Test data (remove for production)
+		[self addTestData];
 	}
 	return self;
+}
+
+- (void)addTestData {
+	
+	LSITask *task1 = [[LSITask alloc] init];
+	task1.name = @"Take out the trash";
+	task1.notes = @"It smells in the kitchen!";
+	task1.dueDate = [NSDate date];
+	
+	LSITask *task2 = [[LSITask alloc] init];
+	task2.name = @"Walk the dog";
+	task2.notes = @"Row needs a bathroom break";
+	task2.dueDate = [NSDate dateWithTimeIntervalSinceNow:60 * 60 * 4]; // ~ 4 hours
+	
+	[_internalTasks addObjectsFromArray:@[task1, task2]];
 }
 
 - (void)addTask:(LSITask *)task {
