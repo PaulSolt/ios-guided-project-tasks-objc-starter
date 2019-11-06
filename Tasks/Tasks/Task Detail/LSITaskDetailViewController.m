@@ -7,6 +7,8 @@
 //
 
 #import "LSITaskDetailViewController.h"
+#import "LSITaskController.h"
+#import "LSITask.h"
 
 @interface LSITaskDetailViewController ()
 

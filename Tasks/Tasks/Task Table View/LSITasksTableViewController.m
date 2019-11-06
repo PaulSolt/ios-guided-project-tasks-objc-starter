@@ -7,6 +7,7 @@
 //
 
 #import "LSITasksTableViewController.h"
+#import "LSITaskDetailViewController.h"
 #import "LSITaskController.h"
 #import "LSITask.h"
 
@@ -15,7 +16,7 @@
 
 // Private properties
 @property (nonatomic, readonly) NSDateFormatter *dateFormatter;
-@property (nonatomic) LSITaskController *controller;
+@property (nonatomic) LSITaskController *taskController;
 @end
 
 @implementation LSITasksTableViewController
@@ -23,7 +24,7 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
 	self = [super initWithCoder:coder];
 	if (self) {
-		_controller = [[LSITaskController alloc] init];
+		_taskController = [[LSITaskController alloc] init];
 	}
 	return self;
 }
@@ -31,13 +32,13 @@
 // MARK: - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return self.controller.tasks.count;
+	return self.taskController.tasks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
 	
-	LSITask *task = self.controller.tasks[indexPath.row];
+	LSITask *task = self.taskController.tasks[indexPath.row];
 	
 	cell.textLabel.text = task.name;
 	cell.detailTextLabel.text = [self.dateFormatter stringFromDate:task.dueDate];
@@ -48,13 +49,28 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        LSITask *task = self.controller.tasks[indexPath.row];
-        [self.controller removeTask:task];
+        LSITask *task = self.taskController.tasks[indexPath.row];
+        [self.taskController removeTask:task];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
 // MARK: - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+// ShowTaskDetail = show an existing
+// ShowCreateTask = create brand new task and add it
+    if ([segue.identifier isEqualToString:@"ShowTaskDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        LSITaskDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.taskController = self.taskController;
+        detailVC.task = self.taskController.tasks[indexPath.row];
+    }
+
+    if ([segue.identifier isEqualToString:@"ShowCreateTask"]) {
+        LSITaskDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.taskController = self.taskController;
+    }
+}
 
 // MARK: - Properties
 

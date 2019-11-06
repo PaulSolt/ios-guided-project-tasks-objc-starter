@@ -30,7 +30,7 @@
 	
 	LSITaskController *controller = [[LSITaskController alloc] init];
 	
-	//controller.tasks = @[];  // Can't assign if it's readonly
+	//taskController.tasks = @[];  // Can't assign if it's readonly
 	NSArray *tasks = controller.tasks;
 
 	[controller addTask:task];
