@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 //#import "../Tasks/Task Model/LSITask.h"
 #import "LSITask.h"
-
+#import "LSITaskController.h"
 @interface TasksTests : XCTestCase
 
 @end
@@ -25,6 +25,19 @@
 	NSLog(@"Task: %@", task.name);
 	
 //	task._priority = 3; // Not a public instance variable
+	
+	LSITaskController *controller = [[LSITaskController alloc] init];
+	
+	//controller.tasks = @[];  // Can't assign if it's readonly
+	NSArray *tasks = controller.tasks;
+
+	[controller addTask:task];
+
+	NSLog(@"Tasks: %@", controller.tasks);
+
+	[controller removeTask:task];
+
+	NSLog(@"Tasks: %@", controller.tasks);
 
 }
 
