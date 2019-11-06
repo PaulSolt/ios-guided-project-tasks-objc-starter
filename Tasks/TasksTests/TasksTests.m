@@ -19,7 +19,12 @@
 - (void)testCode {
 	
 	LSITask *task = [[LSITask alloc] init];
+
+	[task setName:@"Wash the car"];
 	
+	NSLog(@"Task: %@", task.name);
+	
+//	task._priority = 3; // Not a public instance variable
 
 }
 

@@ -95,8 +95,7 @@
 				BD08F327234E3AF800771883 /* AppDelegate.m */,
 				BD08F329234E3AF800771883 /* SceneDelegate.h */,
 				BD08F32A234E3AF800771883 /* SceneDelegate.m */,
-				BD9AA53423733A6700E8D4EF /* LSITask.h */,
-				BD9AA53523733A6700E8D4EF /* LSITask.m */,
+				BD9AA53823733AAA00E8D4EF /* Model */,
 				BD21D029234E40E200E45282 /* Task Table View */,
 				BD21D028234E3F8D00E45282 /* Task Detail */,
 				BD08F353234E3B3900771883 /* Main.storyboard */,
@@ -133,6 +132,15 @@
 				BD08F34F234E3B3000771883 /* LSITasksTableViewController.m */,
 			);
 			path = "Task Table View";
+			sourceTree = "<group>";
+		};
+		BD9AA53823733AAA00E8D4EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA53423733A6700E8D4EF /* LSITask.h */,
+				BD9AA53523733A6700E8D4EF /* LSITask.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
