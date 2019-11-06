@@ -10,6 +10,8 @@
 //#import "../Tasks/Task Model/LSITask.h"
 #import "LSITask.h"
 #import "LSITaskController.h"
+#import "NSString+LSIRepeatString.h"
+
 @interface TasksTests : XCTestCase
 
 @end
@@ -39,6 +41,9 @@
 
 	NSLog(@"Tasks: %@", controller.tasks);
 
+	
+	NSString *parrot = @"Hello";
+	NSLog(@"Parrot: %@", [parrot repeatString]);
 }
 
 @end
