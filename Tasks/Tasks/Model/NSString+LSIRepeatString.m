@@ -11,8 +11,10 @@
 @implementation NSString (LSIRepeatString)
 
 - (NSString *)repeatString {
-	
-	return nil;
+	// Options:
+	// 1. for loop
+	// 2. stringWithFormat
+	return [NSString stringWithFormat:@"%@ %@ %@", self, self, self];
 }
 
 @end
