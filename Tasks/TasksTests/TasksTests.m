@@ -47,7 +47,7 @@
 	
 	
 	// Class method / property
-//	task.totalTasksCreated // class method error
+//	task.totalTasksCreated // class method error (task is an instance)
 	
 	NSLog(@"Tasks created: %d", LSITaskController.totalTasksCreated);
 }
