@@ -7,26 +7,42 @@
 //
 
 #import "LSITasksTableViewController.h"
+#import "LSITaskController.h"
+#import "LSITask.h"
 
+// Class Extension
 @interface LSITasksTableViewController ()
 
+// Private properties
 @property (nonatomic, readonly) NSDateFormatter *dateFormatter;
-
+@property (nonatomic) LSITaskController *controller;
 @end
 
 @implementation LSITasksTableViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder {
+	self = [super initWithCoder:coder];
+	if (self) {
+		_controller = [[LSITaskController alloc] init];
+	}
+	return self;
+}
 
 // MARK: - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	#warning FIXME
-	return 0;
+	return self.controller.tasks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-#warning FIXME
-    return [[UITableViewCell alloc] init];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+	
+	LSITask *task = self.controller.tasks[indexPath.row];
+	
+	cell.textLabel.text = task.name;
+	cell.detailTextLabel.text = [self.dateFormatter stringFromDate:task.dueDate];
+	
+	return cell;
 }
 
 // MARK: - Navigation
