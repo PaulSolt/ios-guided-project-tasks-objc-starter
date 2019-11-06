@@ -21,16 +21,15 @@
 
 @implementation LSITaskDetailViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     [self updateViews];
 }
 
 // MARK: - Properties
-- (void)setTask:(LSITask *)task
-{
+
+- (void)setTask:(LSITask *)task {
     if (task != _task) {
         _task = task;
         [self updateViews];
@@ -39,8 +38,19 @@
 
 // MARK: - Actions
 
-- (IBAction)save:(id)sender {
-
+- (IBAction)saveButtonPressed:(id)sender {
+    BOOL isNewTask = self.task == nil;
+    
+    LSITask *task = self.task ?: [[LSITask alloc] init];
+    task.name = self.nameTextField.text;
+    task.notes = self.notesTextView.text;
+    task.dueDate = self.datePicker.date;
+    
+    if (isNewTask) {
+        [self.taskController addTask:task];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 // MARK: - Private
@@ -53,8 +63,5 @@
     self.notesTextView.text = self.task.notes;
     self.datePicker.date = self.task.dueDate;
 }
-
-
-
 
 @end
