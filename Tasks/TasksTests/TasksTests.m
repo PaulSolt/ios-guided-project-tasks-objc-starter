@@ -10,6 +10,8 @@
 //#import "../Tasks/Task Model/LSITask.h"
 //#import "LSITask.h"
 #import "../Tasks/LSITask.h"
+#import "NSString+LSIRepeatString.h"
+#import "LSITaskController.h"
 
 @interface TasksTests : XCTestCase
 
@@ -48,6 +50,19 @@
 	[task setTitle:@"Read Startup book"];
 	[task setDate:[NSDate dateWithTimeIntervalSinceNow:60]];
 	NSDate *date2 = [task date];
+	
+	
+	NSString *parrot = @"Hello";
+	NSLog(@"Parrot: %@", [parrot repeatString]);
+	
+	LSITaskController *controller = [[LSITaskController alloc] init];
+	
+	// Instance property
+	NSArray *tasks = controller.tasks;
+//	[controller taskCount]; // taskCount is a class method
+	// Class method
+	int totalCount = [LSITaskController taskCount];
+	
 }
 
 @end

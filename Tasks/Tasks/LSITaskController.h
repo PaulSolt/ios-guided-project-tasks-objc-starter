@@ -17,12 +17,20 @@
 // array of tasks
 
 @property (readonly) NSArray *tasks;
+@property (class) int taskCount;
+
 // readonly = getter, no setter
 
-// FUTURE: encapsulate tasks (add a add/remove method)
 
 - (void)addTask:(LSITask *)task;
 - (void)removeTask:(LSITask *)task;
+
+// - = instance method
+//
+// + = class method
+
+//+ (int)taskCount;
+
 
 @end
 

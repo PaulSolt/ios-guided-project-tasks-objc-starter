@@ -20,6 +20,8 @@
 		BDC4AD6023A163ED0002FC4A /* LSITask.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4D3D9423A15EE600B13777 /* LSITask.m */; };
 		BDC4AD6323A16B9E0002FC4A /* LSITaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */; };
 		BDC4AD6423A16B9E0002FC4A /* LSITaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */; };
+		BDC4AD6723A16FCC0002FC4A /* NSString+LSIRepeatString.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC4AD6623A16FCC0002FC4A /* NSString+LSIRepeatString.m */; };
+		BDC4AD6823A16FCC0002FC4A /* NSString+LSIRepeatString.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC4AD6623A16FCC0002FC4A /* NSString+LSIRepeatString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		BD4D3D9423A15EE600B13777 /* LSITask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITask.m; sourceTree = "<group>"; };
 		BDC4AD6123A16B9E0002FC4A /* LSITaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITaskController.h; sourceTree = "<group>"; };
 		BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITaskController.m; sourceTree = "<group>"; };
+		BDC4AD6523A16FCC0002FC4A /* NSString+LSIRepeatString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSIRepeatString.h"; sourceTree = "<group>"; };
+		BDC4AD6623A16FCC0002FC4A /* NSString+LSIRepeatString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSIRepeatString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				BD4D3D9423A15EE600B13777 /* LSITask.m */,
 				BDC4AD6123A16B9E0002FC4A /* LSITaskController.h */,
 				BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */,
+				BDC4AD6523A16FCC0002FC4A /* NSString+LSIRepeatString.h */,
+				BDC4AD6623A16FCC0002FC4A /* NSString+LSIRepeatString.m */,
 				BD21D029234E40E200E45282 /* Task Table View */,
 				BD21D028234E3F8D00E45282 /* Task Detail */,
 				BD08F353234E3B3900771883 /* Main.storyboard */,
@@ -241,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC4AD6723A16FCC0002FC4A /* NSString+LSIRepeatString.m in Sources */,
 				BDC4AD6323A16B9E0002FC4A /* LSITaskController.m in Sources */,
 				BD08F328234E3AF800771883 /* AppDelegate.m in Sources */,
 				BD08F352234E3B3000771883 /* LSITasksTableViewController.m in Sources */,
@@ -255,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC4AD6823A16FCC0002FC4A /* NSString+LSIRepeatString.m in Sources */,
 				BD08F343234E3AF900771883 /* TasksTests.m in Sources */,
 				BDC4AD6423A16B9E0002FC4A /* LSITaskController.m in Sources */,
 				BDC4AD6023A163ED0002FC4A /* LSITask.m in Sources */,
