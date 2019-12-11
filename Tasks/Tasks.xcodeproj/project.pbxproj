@@ -16,6 +16,10 @@
 		BD08F351234E3B3000771883 /* LSITaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD08F34D234E3B2F00771883 /* LSITaskDetailViewController.m */; };
 		BD08F352234E3B3000771883 /* LSITasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD08F34F234E3B3000771883 /* LSITasksTableViewController.m */; };
 		BD08F354234E3B3900771883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD08F353234E3B3900771883 /* Main.storyboard */; };
+		BD4D3D9523A15EE600B13777 /* LSITask.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4D3D9423A15EE600B13777 /* LSITask.m */; };
+		BDC4AD6023A163ED0002FC4A /* LSITask.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4D3D9423A15EE600B13777 /* LSITask.m */; };
+		BDC4AD6323A16B9E0002FC4A /* LSITaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */; };
+		BDC4AD6423A16B9E0002FC4A /* LSITaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		BD08F34F234E3B3000771883 /* LSITasksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSITasksTableViewController.m; sourceTree = "<group>"; };
 		BD08F350234E3B3000771883 /* LSITasksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSITasksTableViewController.h; sourceTree = "<group>"; };
 		BD08F353234E3B3900771883 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BD4D3D9323A15EE600B13777 /* LSITask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITask.h; sourceTree = "<group>"; };
+		BD4D3D9423A15EE600B13777 /* LSITask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITask.m; sourceTree = "<group>"; };
+		BDC4AD6123A16B9E0002FC4A /* LSITaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITaskController.h; sourceTree = "<group>"; };
+		BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITaskController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,10 @@
 				BD08F327234E3AF800771883 /* AppDelegate.m */,
 				BD08F329234E3AF800771883 /* SceneDelegate.h */,
 				BD08F32A234E3AF800771883 /* SceneDelegate.m */,
+				BD4D3D9323A15EE600B13777 /* LSITask.h */,
+				BD4D3D9423A15EE600B13777 /* LSITask.m */,
+				BDC4AD6123A16B9E0002FC4A /* LSITaskController.h */,
+				BDC4AD6223A16B9E0002FC4A /* LSITaskController.m */,
 				BD21D029234E40E200E45282 /* Task Table View */,
 				BD21D028234E3F8D00E45282 /* Task Detail */,
 				BD08F353234E3B3900771883 /* Main.storyboard */,
@@ -229,9 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC4AD6323A16B9E0002FC4A /* LSITaskController.m in Sources */,
 				BD08F328234E3AF800771883 /* AppDelegate.m in Sources */,
 				BD08F352234E3B3000771883 /* LSITasksTableViewController.m in Sources */,
 				BD08F351234E3B3000771883 /* LSITaskDetailViewController.m in Sources */,
+				BD4D3D9523A15EE600B13777 /* LSITask.m in Sources */,
 				BD08F339234E3AF900771883 /* main.m in Sources */,
 				BD08F32B234E3AF800771883 /* SceneDelegate.m in Sources */,
 			);
@@ -242,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD08F343234E3AF900771883 /* TasksTests.m in Sources */,
+				BDC4AD6423A16B9E0002FC4A /* LSITaskController.m in Sources */,
+				BDC4AD6023A163ED0002FC4A /* LSITask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

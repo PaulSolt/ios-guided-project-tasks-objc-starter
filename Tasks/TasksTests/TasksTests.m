@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 //#import "../Tasks/Task Model/LSITask.h"
+//#import "LSITask.h"
+#import "../Tasks/LSITask.h"
 
 @interface TasksTests : XCTestCase
 
@@ -17,8 +19,35 @@
 
 - (void)testCode {
 	
+	// String literal
+	NSString *name = @"Wash dishes";
+	NSString *toy = [[NSString alloc] initWithFormat:@"%@ Ball", @"Red"];
+//	print("Task: \(name)")  // %@ = object token
+	printf("\n");
+	NSLog(@"Task: %@", name);
+	NSLog(@"%@", toy);
 	
+	// c printing function (print formatted)
+	printf("Task: %s\n", name.UTF8String);   // %s = c-string
+	//printf("Task: %s\n", task.description.UTF8String);   // %s = c-string
 
+	
+	LSITask *task = [[LSITask alloc] init];
+	
+	// Properties
+	// setter / getter (dot syntax)
+	// setter and getter methods (call method names)
+	
+	task.date = [NSDate date];  // class method
+	task.notes = @"The keyboard #2 batteries are dead";
+	task.title = @"Change keyboard batteries";
+	
+	printf("Task #2: %s\n", task.title.UTF8String);
+	printf("\n");
+	
+	[task setTitle:@"Read Startup book"];
+	[task setDate:[NSDate dateWithTimeIntervalSinceNow:60]];
+	NSDate *date2 = [task date];
 }
 
 @end
