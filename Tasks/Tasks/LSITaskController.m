@@ -27,10 +27,15 @@ static int count = 0;
 	self = [super init];
 	if (self) {
 		_internalTasks = [[NSMutableArray alloc] init];
+		
+		// [self createTestData];
 	}
 	return self;
 }
 
+- (void)createTestData {
+	// create sample tasks
+}
 
 + (int)taskCount {
 	return count;

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LSITask;
+@class LSITaskController;
 
 @interface LSITaskDetailViewController : UIViewController
 
-
+@property LSITask *task;
+@property LSITaskController *taskController;
 @end
 
