@@ -17,7 +17,7 @@
 // array of tasks
 
 @property (readonly) NSArray *tasks;
-@property (class) int taskCount;
+@property (class, readonly) int taskCount; // TODO: Add getter/class variable (static)
 
 // readonly = getter, no setter
 

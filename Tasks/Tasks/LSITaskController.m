@@ -18,6 +18,8 @@
 
 @implementation LSITaskController
 
+static int count = 0;
+
 // Logic and code details
 
 // init
@@ -29,6 +31,11 @@
 	return self;
 }
 
+
++ (int)taskCount {
+	return count;
+}
+
 // computed property
 - (LSITask *)tasks {
 	return [self.internalTasks copy];
@@ -37,6 +44,7 @@
 // methods
 
 - (void)addTask:(LSITask *)task {
+	count = count + 1;
 	[self.internalTasks addObject:task];
 }
 
