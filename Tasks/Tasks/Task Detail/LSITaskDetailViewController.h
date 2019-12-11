@@ -12,7 +12,9 @@
 
 @interface LSITaskDetailViewController : UIViewController
 
+// Use dependency injection to pass data into the detail view
 @property LSITask *task;
 @property LSITaskController *taskController;
+
 @end
 
