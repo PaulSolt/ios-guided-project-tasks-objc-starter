@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSITaskController;
+
 @interface LSITasksTableViewController : UITableViewController
+
+@property LSITaskController *taskController;
 
 @end

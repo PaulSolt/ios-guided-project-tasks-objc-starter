@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 //#import "../Tasks/Model/LSITask.h"  // #import bug? may need relative path to a Model group
 #import "LSITask.h"
+#import "NSString+LSIRepeatString.h"
 
 @interface TasksTests : XCTestCase
 
@@ -36,6 +37,11 @@
 	// Try creating other objects or calling methods to verify you understand
 	// Objective-C code.
 
+	// Category = add new functions to existing classes you don't own
+	NSString *phone = @"iPhone";
+	
+	NSLog(@"Parrot: %@", [phone lsi_repeatString]);
+	
 }
 
 @end

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BD0236FC23D8B9E700065094 /* LSITask.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0236FB23D8B9E700065094 /* LSITask.m */; };
 		BD0236FD23D8B9E700065094 /* LSITask.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0236FB23D8B9E700065094 /* LSITask.m */; };
+		BD02370023D8C68F00065094 /* LSITaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0236FF23D8C68F00065094 /* LSITaskController.m */; };
+		BD02370123D8C68F00065094 /* LSITaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0236FF23D8C68F00065094 /* LSITaskController.m */; };
+		BD02370423D8D52800065094 /* NSString+LSIRepeatString.m in Sources */ = {isa = PBXBuildFile; fileRef = BD02370323D8D52800065094 /* NSString+LSIRepeatString.m */; };
+		BD02370823D8D7BE00065094 /* NSString+LSIRepeatString.m in Sources */ = {isa = PBXBuildFile; fileRef = BD02370323D8D52800065094 /* NSString+LSIRepeatString.m */; };
 		BD08F328234E3AF800771883 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD08F327234E3AF800771883 /* AppDelegate.m */; };
 		BD08F32B234E3AF800771883 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD08F32A234E3AF800771883 /* SceneDelegate.m */; };
 		BD08F333234E3AF900771883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD08F332234E3AF900771883 /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 /* Begin PBXFileReference section */
 		BD0236FA23D8B9E700065094 /* LSITask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITask.h; sourceTree = "<group>"; };
 		BD0236FB23D8B9E700065094 /* LSITask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITask.m; sourceTree = "<group>"; };
+		BD0236FE23D8C68F00065094 /* LSITaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITaskController.h; sourceTree = "<group>"; };
+		BD0236FF23D8C68F00065094 /* LSITaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITaskController.m; sourceTree = "<group>"; };
+		BD02370223D8D52800065094 /* NSString+LSIRepeatString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LSIRepeatString.h"; sourceTree = "<group>"; };
+		BD02370323D8D52800065094 /* NSString+LSIRepeatString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSIRepeatString.m"; sourceTree = "<group>"; };
 		BD08F323234E3AF800771883 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD08F326234E3AF800771883 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD08F327234E3AF800771883 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,9 +102,13 @@
 				BD08F326234E3AF800771883 /* AppDelegate.h */,
 				BD08F327234E3AF800771883 /* AppDelegate.m */,
 				BD08F329234E3AF800771883 /* SceneDelegate.h */,
+				BD08F32A234E3AF800771883 /* SceneDelegate.m */,
 				BD0236FA23D8B9E700065094 /* LSITask.h */,
 				BD0236FB23D8B9E700065094 /* LSITask.m */,
-				BD08F32A234E3AF800771883 /* SceneDelegate.m */,
+				BD0236FE23D8C68F00065094 /* LSITaskController.h */,
+				BD0236FF23D8C68F00065094 /* LSITaskController.m */,
+				BD02370223D8D52800065094 /* NSString+LSIRepeatString.h */,
+				BD02370323D8D52800065094 /* NSString+LSIRepeatString.m */,
 				BD21D029234E40E200E45282 /* Task Table View */,
 				BD21D028234E3F8D00E45282 /* Task Detail */,
 				BD08F353234E3B3900771883 /* Main.storyboard */,
@@ -235,6 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD02370423D8D52800065094 /* NSString+LSIRepeatString.m in Sources */,
+				BD02370023D8C68F00065094 /* LSITaskController.m in Sources */,
 				BD08F328234E3AF800771883 /* AppDelegate.m in Sources */,
 				BD08F352234E3B3000771883 /* LSITasksTableViewController.m in Sources */,
 				BD08F351234E3B3000771883 /* LSITaskDetailViewController.m in Sources */,
@@ -248,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD02370823D8D7BE00065094 /* NSString+LSIRepeatString.m in Sources */,
 				BD08F343234E3AF900771883 /* TasksTests.m in Sources */,
+				BD02370123D8C68F00065094 /* LSITaskController.m in Sources */,
 				BD0236FD23D8B9E700065094 /* LSITask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
