@@ -9,7 +9,7 @@
 #import "LSITaskController.h"
 #import "LSITask.h"
 
-// Class Extension
+// Class Extension - anonymous category
 @interface LSITaskController() {
 	// private instance variables
 }
